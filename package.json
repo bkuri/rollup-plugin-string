@@ -1,0 +1,53 @@
+{
+  "author": "Bernardo Kuri <github+rollup-plugin-string@bkuri.com>",
+  "browser": "dist/rollup-plugin-string.umd.min.js",
+  "description": "Converts text files to modules",
+  "homepage": "https://github.com/bkuri/rollup-plugin-string",
+  "license": "MIT",
+  "main": "dist/rollup-plugin-string.min.cjs",
+  "module": "dist/rollup-plugin-string.min.mjs",
+  "name": "@bkuri/rollup-plugin-string",
+  "type": "module",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/bkuri/rollup-plugin-string/issues"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^5.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "del-cli": "^5.1.0",
+    "mocha": "^10.2.0",
+    "rollup": "^3.29.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "stringify",
+    "string",
+    "template"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bkuri/rollup-plugin-string.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "del-cli dist",
+    "prebuild": "yarn clean",
+    "prepare": "yarn build",
+    "pretest": "yarn build",
+    "test": "mocha test/*.js"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
